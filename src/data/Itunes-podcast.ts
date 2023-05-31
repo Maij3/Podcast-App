@@ -1,5 +1,4 @@
-export const podcast = [
-  {
+export const podcast = {
     feed: {
       author: {
         name: { label: "iTunes Store" },
@@ -6144,5 +6143,4 @@ export const podcast = [
           "https://mzstoreservices-int.itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json",
       },
     },
-  },
-];
+  }
