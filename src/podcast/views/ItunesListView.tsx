@@ -11,7 +11,7 @@ export const ItunesListView = () => {
   const search = useTypedSelector((state: RootState) => state.podcast.search);
   const podcastList = filterPodcast(podcast, search);
   const { isSuccess } = useGetPodcastQuery(100);
-
+  console.log({podcast})
   return (
     <Box>
       <PodcastSearch />

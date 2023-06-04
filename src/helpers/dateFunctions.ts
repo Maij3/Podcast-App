@@ -1,5 +1,6 @@
 import {
   addMilliseconds,
+  differenceInMilliseconds,
   differenceInMinutes,
   format,
   formatDistanceToNow,
@@ -24,14 +25,18 @@ export const getFormat = (date: number | undefined | Date) => {
 };
 
 export const getFormatMinutes = (date: string) => {
-  const second = parseFloat(date);
-/*   const duration = intervalToDuration({
+  try {
+    const second = parseFloat(date);
+    //const second = milliseconds / 1000;
+    /*   const duration = intervalToDuration({
     start: 0,
     end: second * 1000,
   }); */
-  const minutes= format(second, "m");
-  const seconds = format(second, "ss")
-  console.log({minutes , seconds})
-  const formatted = `${minutes}:${seconds}`;
-  return formatted;
+    const minutes = format(second, "m");
+    const seconds = format(second, "ss");
+    const formatted = `${minutes}:${seconds}`;
+    return formatted;
+  } catch (error) {
+    console.log(error);
+  }
 };

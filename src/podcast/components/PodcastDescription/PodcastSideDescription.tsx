@@ -1,5 +1,6 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { FC } from "react";
+import { generateLink } from "../../../helpers";
 
 interface Props {
   img: string;
@@ -12,13 +13,10 @@ export const PodcastSideDescription: FC<Props> = ({
   description,
   name,
 }) => {
+  description = generateLink(description)
   return (
-    <Card sx={{ padding: "10px" }}>
-      <CardMedia
-        sx={{ padding: "10px 25px" }}
-        component={"img"}
-        image={img}
-      />
+    <Card sx={{ padding: "10px" , height:"calc(100% - 30px) !important" }}>
+      <CardMedia sx={{ padding: "10px 25px" }} component={"img"} image={img} />
       <Box component={"hr"} />
       <CardContent>
         <Typography fontWeight={"bold"}>{name}</Typography>
@@ -31,8 +29,8 @@ export const PodcastSideDescription: FC<Props> = ({
             Description:
           </Box>
           <Box component={"br"} />
-          {description}
         </Typography>
+        <p dangerouslySetInnerHTML={{ __html: description }}></p>
       </CardContent>
     </Card>
   );

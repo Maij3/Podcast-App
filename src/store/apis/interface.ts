@@ -11,7 +11,5 @@ export interface GetProductsResponse {
 export interface Podcast {
   entry?: [];
   search: string;
+  podcastById?: [];
 }
-
-
-
