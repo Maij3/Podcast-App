@@ -3,7 +3,6 @@ import { ItunesCard, PodcastSearch } from "../components";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { RootState } from "../../store";
 import { filterPodcast } from "../../helpers";
-import useActions from "../../hooks/useActions";
 import { useGetPodcastQuery } from "../../store/apis";
 import { CheckingAuth } from "../../ui/components/CheckingPodcast";
 
