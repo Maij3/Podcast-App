@@ -13,4 +13,15 @@ export const podcastTheme = createTheme({
       main: ThemePalette.RED,
     },
   },
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          "& .MuiInputBase-input": {
+            padding: "10px 16px",
+          },
+        },
+      },
+    },
+  },
 });
