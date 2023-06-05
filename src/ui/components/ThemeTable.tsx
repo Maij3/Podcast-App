@@ -17,7 +17,7 @@ interface Props {
 
 export const ThemeTable: FC<Props> = ({ results }) => {
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ marginBottom: "20px" }}>
       <Table>
         <TableHead>
           <TableRow>

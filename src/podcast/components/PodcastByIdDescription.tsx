@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Card, CardContent , Typography } from "@mui/material";
 import { FC } from "react";
 import { generateLink } from "../../helpers";
 

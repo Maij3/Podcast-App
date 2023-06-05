@@ -1,10 +1,19 @@
-export const generateLink = (text: string) => {
-  const regex = /\b((?:https?:\/\/|www\.)[^\s]+)/g;
-  return text.replace(regex, function(match) {
-    if (match.startsWith('http://') || match.startsWith('https://')) {
-      return '<a href="' + match + '" target="_blank">' + match + '</a>';
-    } else {
-      return '<a href="http://' + match + '" target="_blank">' + match + '</a>';
+export function generateLink(texto: string): string { 
+  const regex = /(https?:\/\/[^\s]+)|(?:^|\s)([^\s]+\.(?:com|fm|link)(?:\/[^\s]+)*)\b/g;
+
+  return texto.replace(
+    regex,
+    (
+      match: string,
+      url: string | undefined,
+      domain: string | undefined
+    ): string => {
+      if (url) {
+        return `<a href="${url}" target="_blank"> ${url}</a>`;
+      } else if (domain) {
+        return `<a href="http://${domain}" target="_blank"> ${domain}</a>`;
+      }
+      return match;
     }
-  });
-};
+  );
+}

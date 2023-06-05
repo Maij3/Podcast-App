@@ -33,14 +33,14 @@ export const PodcastById = () => {
           const name = item.trackName;
           return (
             <React.Fragment key={`${key}-${name}`}>
-              <Grid item xs={3} >
+              <Grid item xs={12} md={3} >
                 <PodcastSideDescription
                   img={img}
                   description={description}
                   name={name}
                 />
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <PodcastByIdDescription
                   audio={audio}
                   description={description}

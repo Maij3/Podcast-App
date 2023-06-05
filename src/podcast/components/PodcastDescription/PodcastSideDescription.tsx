@@ -15,7 +15,7 @@ export const PodcastSideDescription: FC<Props> = ({
 }) => {
   description = generateLink(description)
   return (
-    <Card sx={{ padding: "10px" , height:"calc(100% - 30px) !important" }}>
+    <Card sx={{ padding: "10px"  , marginBottom:"20px"}}>
       <CardMedia sx={{ padding: "10px 25px" }} component={"img"} image={img} />
       <Box component={"hr"} />
       <CardContent>
