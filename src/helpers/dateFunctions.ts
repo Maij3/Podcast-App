@@ -1,7 +1,4 @@
-import {
-  format,
-  formatDistanceToNow,
-} from "date-fns";
+import { format, formatDistanceToNow } from "date-fns";
 
 export const getFormatDistanceToNow = (date: number | undefined | Date) => {
   if (date) {
@@ -22,17 +19,20 @@ export const getFormat = (date: number | undefined | Date) => {
 
 export const getFormatMinutes = (date: string) => {
   try {
-    const second = parseFloat(date);
-    //const second = milliseconds / 1000;
-    /*   const duration = intervalToDuration({
-    start: 0,
-    end: second * 1000,
-  }); */
-    const minutes = format(second, "m");
-    const seconds = format(second, "ss");
-    const formatted = `${minutes}:${seconds}`;
-    return formatted;
+    const milliseconds = parseFloat(date);
+    const minutos = Math.floor(milliseconds / 60000);
+    const minutosFormateados = format(new Date().setMinutes(minutos), "m:ss"); // Formatear minutos en formato de canción
+    return minutosFormateados;
   } catch (error) {
     console.log(error);
   }
 };
+
+/* export function milisegundosAMinutosCancion(milisegundos:any) {
+  milisegundos = parseFloat(milisegundos)
+  const minutos = Math.floor(milisegundos / 60000); // Convertir milisegundos a minutos
+
+  const minutosFormateados = format(new Date().setMinutes(minutos), 'm:ss'); // Formatear minutos en formato de canción
+
+  return minutosFormateados;
+} */

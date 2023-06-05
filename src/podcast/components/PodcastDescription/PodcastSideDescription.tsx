@@ -40,7 +40,7 @@ export const PodcastSideDescription: FC<Props> = ({
           </Box>
           <Box component={"br"} />
         </Typography>
-        <p dangerouslySetInnerHTML={{ __html: description }}></p>
+        <p dangerouslySetInnerHTML={{ __html: description }} style={{overflowWrap:"break-word"}}></p>
       </CardContent>
     </Card>
   );
