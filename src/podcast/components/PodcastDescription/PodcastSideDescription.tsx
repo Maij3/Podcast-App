@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { FC } from "react";
 import { generateLink } from "../../../helpers";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   img: string;
@@ -13,12 +14,21 @@ export const PodcastSideDescription: FC<Props> = ({
   description,
   name,
 }) => {
-  description = generateLink(description)
+  description = generateLink(description);
+  const navigate = useNavigate();
+  const onNavigateBack = () => {
+    navigate(-1);
+  };
   return (
-    <Card sx={{ padding: "10px"  , marginBottom:"20px"}}>
-      <CardMedia sx={{ padding: "10px 25px" }} component={"img"} image={img} />
+    <Card sx={{ padding: "10px", marginBottom: "20px" }}>
+      <CardMedia
+        sx={{ padding: "10px 25px" }}
+        component={"img"}
+        image={img}
+        onClick={onNavigateBack}
+      />
       <Box component={"hr"} />
-      <CardContent>
+      <CardContent onClick={onNavigateBack}>
         <Typography fontWeight={"bold"}>{name}</Typography>
         <Typography fontStyle={"italic"}>{`By: ${name}`}</Typography>
       </CardContent>

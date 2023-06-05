@@ -1,69 +1,71 @@
-# Proyecto en Vite
+# Vite Project
 
-¡Bienvenido/a al proyecto en Vite! Este repositorio contiene el código fuente de una aplicación web desarrollada utilizando Vite, un entorno de desarrollo rápido para aplicaciones web en JavaScript.
+Welcome to the Vite project! This repository contains the source code of a web application developed using Vite, a fast development environment for web applications in JavaScript.
 
-## Descripción
+## Description
 
-El objetivo de este proyecto es proporcionar una base sólida y moderna para construir aplicaciones web utilizando Vite. Vite es un framework de desarrollo rápido que permite crear aplicaciones web con un rendimiento excelente. En este proyecto, hemos configurado Vite con las herramientas y dependencias necesarias para comenzar a desarrollar tu aplicación de forma eficiente.
+The goal of this project is to provide a solid and modern foundation for building web applications using Vite. Vite is a rapid development framework that allows you to create web applications with excellent performance. In this project, we have set up Vite with the necessary tools and dependencies to start developing your application efficiently.
 
-## Características
+## Features
 
-- Configuración predeterminada de Vite para un inicio rápido.
-- Soporte para JavaScript moderno (ES6+).
-- Integración con React (u otra biblioteca de tu elección).
-- Soporte para recarga en caliente (hot-reloading) para una experiencia de desarrollo fluida.
-- Empaquetado optimizado para producción con generación de código minificado y optimizado.
-- Soporte para gestión de rutas (routing) mediante React Router (o una alternativa de tu preferencia).
+- Default Vite configuration for quick start.
+- Support for modern JavaScript (ES6+).
+- Integration with React (or any other library of your choice).
+- Hot-reloading support for a smooth development experience.
+- Optimized bundling for production with minified and optimized code generation.
+- Routing management support using React Router (or an alternative of your preference).
 
-## Requisitos previos
+## Prerequisites
 
-Antes de comenzar a trabajar con este proyecto, asegúrate de tener instalado Node.js en tu máquina. Puedes descargarlo e instalarlo desde el sitio web oficial de Node.js: [https://nodejs.org](https://nodejs.org)
+Before getting started with this project, make sure you have Node.js installed on your machine. You can download and install it from the official Node.js website: [https://nodejs.org](https://nodejs.org)
 
-## Configuración
+## Configuration
 
-Sigue estos pasos para configurar el proyecto en tu entorno de desarrollo local:
+Follow these steps to set up the project on your local development environment:
 
-1. Clona este repositorio en tu máquina local o descarga el código fuente.
+1. Clone this repository to your local machine or download the source code.
 
   ```shell
     git clone https://github.com/Maij3/Postcast-App.git
   ```
-2.- Navega hasta el directorio del proyecto:
+2.- Navigate to the project directory:
 
   ```shell
     cd podcast-app
   ```
-3.- Instala las dependencias del proyecto utilizando npm (o yarn):
+3.- Install the project dependencies using npm (or yarn):
 
   ```shell
     npm install
   ```
-4.- Inicia el servidor de desarrollo local:
+4.- Start the local development server::
 
   ```shell
     npm run dev
   ```
 
-## Estructura del proyecto
- - public: Este directorio contiene archivos estáticos que se copiarán sin procesamiento en la carpeta de salida final.
+## Project Structure
 
-  - src: Aquí es donde se encuentra el código fuente de la aplicación.
-  components: Componentes reutilizables de la aplicación.
+ - public: This directory contains static files that will be copied as-is to the final output folder.
 
-  - pages: Páginas o vistas de la aplicación.
+- src: src: This is where the application source code is located.
 
-  -  App.js: El componente raíz de la aplicación.
+    - components: Componentes reutilizables de la aplicación.
 
-  -  index.js: El punto de entrada principal de la aplicación.
+    - pages: Application pages or views.
 
-  - package.json: Archivo de configuración de npm que incluye las dependencias y scripts del proyecto.
+    -  PodcastApp.js: The root component of the application.
 
-## Scripts disponibles
+   -  index.js: The main entry point of the application.
 
-En el directorio del proyecto, puedes ejecutar los siguientes scripts:
+- package.json: The npm configuration file that includes project dependencies and scripts.
 
-  - npm run dev: Inicia el servidor de desarrollo local.
+## Available Scripts
 
-  - npm run build: Crea una versión optimizada y lista para producción de la aplicación.
+In the project directory, you can run the following scripts:
 
-  - npm run serve: Sirve la versión de producción de la aplicación en un servidor local.
+  - npm run dev: Starts the local development server.
+
+  - npm run build: Creates an optimized, production-ready build of the application.
+
+  - npm run serve: Serves the production version of the application on a local server.
