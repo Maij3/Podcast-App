@@ -4,4 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+    build: {
+    minify: false, // Minimizar los assets en modo production
+  },
 })

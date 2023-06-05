@@ -69,3 +69,8 @@ In the project directory, you can run the following scripts:
   - npm run build: Creates an optimized, production-ready build of the application.
 
   - npm run serve: Serves the production version of the application on a local server.
+
+  - npx vite build --config vite.config.prod.ts: To run Vite in production mode, use the following command
+
+  - npx vite build --config vite.config.ts: To run Vite in develoment mode, use the following command 
+   
