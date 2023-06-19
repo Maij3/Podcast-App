@@ -9,6 +9,7 @@ import { CheckingAuth } from "../../ui/components/CheckingPodcast";
 export const PodcastDetails = () => {
   const { id } = useParams();
   const { data, isSuccess } = useGetByIdPodcastQuery(id);
+  console.log({data})
   return (
     <Box marginTop={"40px"}>
       <Grid container spacing={2} justifyContent={"space-between"}>

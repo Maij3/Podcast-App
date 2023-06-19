@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItunesCard/> ItunesCard snapshot  1`] = `
+<div>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-lg-3 css-13i4rnv-MuiGrid-root"
+  >
+    <a
+      href="/podcast/"
+      style="width: 100%; text-decoration: none;"
+    >
+      <div
+        class="MuiBox-root css-125hhly"
+      >
+        <img
+          alt=""
+          class="itunes-list-img"
+          height="130px"
+          src=""
+          style="margin: auto; display: block; border-radius: 100%; width: 50%; position: absolute; top: 0%; left: 50%; transform: translate(-50%, -50%);"
+          width="100"
+        />
+        <div
+          class="MuiBox-root css-aja26h"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-h6 css-2ulfj5-MuiTypography-root"
+          />
+          <p
+            class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+          >
+            Author: 
+          </p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;

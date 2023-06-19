@@ -9,9 +9,9 @@ export function generateLink(texto: string): string {
       domain: string | undefined
     ): string => {
       if (url) {
-        return `<a href="${url}" target="_blank"> ${url}</a>`;
+        return ` <a href="${url}" target="_blank">${url}</a>`;
       } else if (domain) {
-        return `<a href="http://${domain}" target="_blank"> ${domain}</a>`;
+        return ` <a href="http://${domain}" target="_blank">${domain}</a>`;
       }
       return match;
     }
