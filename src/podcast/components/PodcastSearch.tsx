@@ -1,18 +1,23 @@
 import { Box, TextField } from "@mui/material";
 import { useForm } from "../../hooks";
 import useActions from "../../hooks/useActions";
-import { useEffect } from 'react';
+import { FC, useEffect } from "react";
 
 const initialValue = {
   search: "",
 };
-export const PodcastSearch = () => {
-  const { search, onChange } = useForm(initialValue);
-  const  { setSearch } = useActions();
 
-  useEffect(()=>{
-      setSearch(search.toLowerCase())  
-    },[search])
+interface Props {
+  count: number;
+}
+
+export const PodcastSearch: FC<Props> = ({ count }) => {
+  const { search, onChange } = useForm(initialValue);
+  const { setSearch } = useActions();
+
+  useEffect(() => {
+    setSearch(search.toLowerCase());
+  }, [search]);
 
   return (
     <Box
@@ -32,7 +37,7 @@ export const PodcastSearch = () => {
         bgcolor={"#27A4F2"}
         marginRight={"15px"}
       >
-        100
+        {count}
       </Box>
       <TextField
         placeholder="Filter podcast..."

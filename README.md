@@ -10,14 +10,6 @@ In addition to displaying the top 100 most popular podcasts, the project will of
 
 Finally, the project will be designed with a responsive approach, meaning that it will be optimized for use on a variety of devices and screens. This functionality will allow users to access the top 100 podcasts from anywhere and at any time. In short, this project will be a useful tool for podcast lovers who want to explore the best podcasts from around the world.
 
-## Features
-
-- Default Vite configuration for quick start.
-- Support for modern JavaScript (ES6+).
-- Integration with React (or any other library of your choice).
-- Hot-reloading support for a smooth development experience.
-- Optimized bundling for production with minified and optimized code generation.
-- Routing management support using React Router (or an alternative of your preference).
 
 ## Prerequisites
 
@@ -53,14 +45,42 @@ Follow these steps to set up the project on your local development environment:
  - public: This directory contains static files that will be copied as-is to the final output folder.
 
 - src: src: This is where the application source code is located.
+    
+    - test: In this folder you can find the tests of the app.
 
-    - components: Componentes reutilizables de la aplicación.
+    - hooks: This folder contains custom hooks for the app
 
-    - pages: Application pages or views.
+    - data: In this folder there are two files, one is called Itunes details and the other Itunes podcast. These two files contain a duplicate of the data that comes with the endpoint. 
+
+    - helpers: This folder contains functions that can be exported to any component. 
+
+    - podcast: Folder structure of the app 
+
+       - components: Application Components.
+
+       - layout: Grid para estructurar las paginas de la aplicacion.
+
+       - pages: Application pages or views.
+
+       - routes: Page podcast routing system.
+
+       - views: Podcast application view.
+   
+    - store: Modules reusable by the app ui
+      
+       - apis: Configuration of redux packages
+
+      - store: Reducx configuration file
+
+      - router: App Router System
+
+    - theme: Configuration of the ui material theme
+
+    - ui: Modules reusable by the app ui
 
     -  PodcastApp.js: The root component of the application.
 
-   -  index.js: The main entry point of the application.
+    -  index.js: The main entry point of the application.
 
 - package.json: The npm configuration file that includes project dependencies and scripts.
 
@@ -71,15 +91,16 @@ In the project directory, you can run the following scripts:
   - npm run dev: Starts the local development server.
 
   - npm run test: To be able to run the tests you have to modify the package.json and add the following
-
+      
+      ```javascript
+        script:{
+          "test": "jest --watchAll"
+      }
+      ```
   - npm run build: Creates an optimized, production-ready build of the application.
 
   - npx vite build --config vite.config.prod.ts: To run Vite in production mode, use the following command
 
   - npx vite build --config vite.config.ts: To run Vite in develoment mode, use the following command 
 
-  ```javascript
-    script:{
-      "test": "jest --watchAll"
-    }
-  ```
+

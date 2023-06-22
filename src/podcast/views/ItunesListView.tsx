@@ -11,9 +11,10 @@ export const ItunesListView = () => {
   const search = useTypedSelector((state: RootState) => state.podcast.search);
   const podcastList = filterPodcast(podcast, search);
   const { isSuccess } = useGetPodcastQuery(100);
+  const count  = podcastList.length
   return (
     <Box>
-      <PodcastSearch />
+      <PodcastSearch count ={count} />
       <Grid container spacing={4}>
         {isSuccess ? (
           podcastList.map((item: any, key: any) => {
