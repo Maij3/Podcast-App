@@ -19,7 +19,7 @@ Before getting started with this project, make sure you have Node.js installed o
 
 Follow these steps to set up the project on your local development environment:
 
-1. Clone this repository to your local machine or download the source code.
+1 - Clone this repository to your local machine or download the source code.
 
   ```shell
     git clone https://github.com/Maij3/Postcast-App.git
@@ -29,12 +29,12 @@ Follow these steps to set up the project on your local development environment:
   ```shell
     cd podcast-app
   ```
-3.- Install the project dependencies using npm (or yarn):
+  3.- Install the project dependencies using npm (or yarn):
 
   ```shell
     npm install
   ```
-4.- Start the local development server::
+  4.- Start the local development server::
 
   ```shell
     npm run dev
